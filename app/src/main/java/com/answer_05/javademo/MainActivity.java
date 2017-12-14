@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         mArrayList.add("InnerClass泄漏修改");
         mArrayList.add("AnnoyClass泄漏");
         mArrayList.add("AnnoyClass泄漏修改");
-        mArrayList.add("Atttt");
         initView();
     }
 
@@ -93,9 +92,6 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 7:
                         startActivity(new Intent(MainActivity.this, AnonyImproveActivity.class));
-                        break;
-                    case 8:
-                        //startActivity(new Intent(MainActivity.this, TestStaticActivity.class));
                         break;
                 }
             }
