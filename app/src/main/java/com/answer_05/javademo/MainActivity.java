@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView rv_main;
     private ArrayList<String> mArrayList;
     private CommonBaseAdapter<String> commonAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,10 +53,10 @@ public class MainActivity extends AppCompatActivity {
     private void initView() {
 
 
-        commonAdapter = new CommonBaseAdapter<String>(this,mArrayList) {
+        commonAdapter = new CommonBaseAdapter<String>(this, mArrayList) {
             @Override
             protected void convert(CommonViewHolder holder, String item, int position) {
-                holder.setText(R.id.btn_item,mArrayList.get(position));
+                holder.setText(R.id.btn_item, mArrayList.get(position));
             }
 
             @Override
@@ -63,13 +64,13 @@ public class MainActivity extends AppCompatActivity {
                 return R.layout.item_main;
             }
         };
-        rv_main.setLayoutManager(new LinearLayoutManager(MainActivity.this,LinearLayoutManager.VERTICAL,false));
+        rv_main.setLayoutManager(new LinearLayoutManager(MainActivity.this, LinearLayoutManager.VERTICAL, false));
         rv_main.setAdapter(commonAdapter);
         commonAdapter.setOnItemClickListener(new CommonBaseAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, Object item, int position) {
 
-                switch (position){
+                switch (position) {
                     case 0:
                         startActivity(new Intent(MainActivity.this, HandlerActivity.class));
                         break;
@@ -106,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void btn_Anr(View view) {
         try {
-            Thread.sleep(20*1000);
+            Thread.sleep(20 * 1000);
             Toast.makeText(this, "jlksdlsd", Toast.LENGTH_SHORT).show();
         } catch (InterruptedException e) {
             e.printStackTrace();
