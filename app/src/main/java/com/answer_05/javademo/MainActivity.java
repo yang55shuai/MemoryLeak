@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
         mArrayList.add("AnnoyClass泄漏修改");
         mArrayList.add("Atttt");
         initView();
-
     }
 
     private void initView() {
