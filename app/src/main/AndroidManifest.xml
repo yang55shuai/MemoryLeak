@@ -27,7 +27,6 @@
         <activity android:name=".handlerLeak.HandlerImproveActivity" />
         <activity android:name=".anony_calss.AnonyClassActivity" />
         <activity android:name=".anony_calss.AnonyImproveActivity" />
-        <activity android:name=".test_static.TestStaticActivity"></activity>
     </application>
 
 </manifest>
